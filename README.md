@@ -48,4 +48,6 @@ A estrutura do switch-case nesse menu também é bem simples e será mostrada lo
                 System.out.println("opções em desenvolvimento");
                 break;
                 
-Nesse código temos o `int escolher` onde 
+Nesse código temos o `int escolher` onde será atribuido um número no `sc.nextInt();` no qual o usuário vai escolher. Quando o usuário escolher o número, independente de qual seja, ele será redirecionado para alguma função ou receberá um aviso de que a opção está em desenvolvimento, caso sua escolha não esteja listada no switch-case.
+
+## Funções
