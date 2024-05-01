@@ -1,4 +1,4 @@
-package java.math;
+package Main.java;
 
 import java.util.Scanner;
 import java.lang.Math;
@@ -110,6 +110,7 @@ public class Main{
         
             default:
                 System.err.println("Você precisa selecionar o número '7' para voltar ao menu.");
+                menu();
                 break;
         } 
         
@@ -272,23 +273,23 @@ public class Main{
             System.out.println("Juros Simples");
             System.out.println("-------------");
 
-            double juros, c, i, n, montante;
+            double juros, capital, i, tempo, montante;
 
             System.out.println("Digite o valor do Capital:");
-            c = sc.nextDouble();
+            capital = sc.nextDouble();
 
             //a porcentagem tem que vim em número com virgula. 2% --> 0,02.
-            System.out.println("Digite o valor da Taxa de Juros:");
+            System.out.println("Digite o valor da Taxa de Juros (em decimais):");
             i = sc.nextDouble();
 
             System.out.println("Digite quanto Tempo vai ser:");
-            n = sc.nextDouble();
+            tempo = sc.nextDouble();
 
-            juros = c * i * n;
+            juros = capital * i * tempo;
 
             System.out.printf("O valor do juros é de R$ %.2f.%n", juros);
 
-            montante = c + juros;
+            montante = capital + juros;
 
             System.out.printf("O valor total do Montante será de R$ %.2f.%n", montante);
             System.out.println("-------------------------------------------");
@@ -316,18 +317,18 @@ public class Main{
             System.out.println("Juros compostos");
             System.out.println("---------------");
 
-            double Montante, C, i2, t;
+            double Montante, capitalI, i2, tempo1;
 
             System.out.println("Digite o valor do Capital inicial:");
-            C = sc.nextDouble();
+            capitalI = sc.nextDouble();
     
             System.out.println("Digite o valor da Taxa de Juros (em decimais):");
             i2 = sc.nextDouble();
     
             System.out.println("Digite o valor do Tempo Total (em número de períodos):");
-            t = sc.nextDouble();
+            tempo1 = sc.nextDouble();
     
-            Montante = C * Math.pow((1 + i2), t);
+            Montante = capitalI * Math.pow((1 + i2), tempo1);
     
             System.out.printf("O valor do montante será de %.2f.%n", Montante);
             System.out.println("----------------------------------");
@@ -413,17 +414,17 @@ public class Main{
 
         Scanner sc = new Scanner(System.in);
 
-        float h, b , A;
+        float altura, base , Area;
 
         System.out.println("Digite a altura do quadrado:");
-        h = sc.nextFloat();
+        altura = sc.nextFloat();
 
         System.out.println("Digite o tamanho da base:");
-        b = sc.nextFloat();
+        base = sc.nextFloat();
 
-        A = h * b;
+        Area = altura * base;
 
-        System.out.println(" O valor da área é de " + A);
+        System.out.println(" O valor da área é de " + Area);
 
         System.out.println("---------------------------");
         System.out.println("Pressione [7] para retornar ao menu");
