@@ -123,14 +123,66 @@ public class Main{
         System.out.println("Bem Vindo a sessão de Teoremas");
         System.out.println("------------------------------");
         System.out.println("Escolha qual você deseja logo abaixo:");
-
+        System.out.println("--------------------------------------");
         System.out.println("Pitágoras [1]");
         System.out.println("Tales [2]");
         System.out.println("Herão [3]");
         System.out.println("Euler [4]");
         System.out.println("Fermat [5]");
+        System.out.println("-------------------------------------");
 
+        int escolha = sc.nextInt();
+
+        switch (escolha) {
+            case 1:
+                teoremaDePitagoras();
+                break;
+            case 2:
+                teoremaDeTales();
+                break;
+            case 3:
+                teoremaDeHerao();
+                break;
+            case 4:
+                teoremaDeEuler();
+                break;
+            case 5:
+                teoremaDeFermat();
+                break;
+            default:
+                System.out.println("Opção errada, deseja ir ao menu, ou retornar ao teorema?");
+                System.out.println("Menu [1]");
+                System.out.println("Teorema [2]");
+                int escolha2 = sc.nextInt();
+                switch (escolha2) {
+                    case 1:
+                        menu();
+                        break;
+                    case 2:
+                        teorema();
+                        break;
+                    default:
+                        menu();
+                        break;
+                }
+                break;
+        }
         sc.close();
+
+    }
+    public static void teoremaDeTales(){
+        
+    }
+
+    public static void teoremaDeHerao(){
+
+    }
+
+    public static void teoremaDeFermat(){
+
+    }
+
+    public static void teoremaDeEuler(){
 
     }
     //função pitágoras
