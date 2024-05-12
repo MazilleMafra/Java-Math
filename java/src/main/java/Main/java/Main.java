@@ -117,6 +117,22 @@ public class Main{
         sc.close();
         
     }
+    public static void teorema(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Bem Vindo a sessão de Teoremas");
+        System.out.println("------------------------------");
+        System.out.println("Escolha qual você deseja logo abaixo:");
+
+        System.out.println("Pitágoras [1]");
+        System.out.println("Tales [2]");
+        System.out.println("Herão [3]");
+        System.out.println("Euler [4]");
+        System.out.println("Fermat [5]");
+
+        sc.close();
+
+    }
     //função pitágoras
     public static void teoremaDePitagoras(){
 
