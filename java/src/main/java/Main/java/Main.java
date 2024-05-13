@@ -16,7 +16,7 @@ public class Main{
         System.out.println("Ecolha a opção abaixo:");
         System.out.println();
         System.out.println("[1] Bhaskara");
-        System.out.println("[2] Teorema de Pitágoras");
+        System.out.println("[2] Teoremas");
         System.out.println("[3] Juros");
         System.out.println("[4] Trignometria do Triângulo Retangulo");
         System.out.println("[5] Área do Quadrado");
@@ -29,7 +29,7 @@ public class Main{
                 bhaskara();
                 break;
             case 2:
-                teoremaDePitagoras();
+                teorema();
                 //para parar de ler quando encontrar a opção selecionada.
                 break;
             case 3:
@@ -171,7 +171,10 @@ public class Main{
 
     }
     public static void teoremaDeTales(){
+        Scanner sc = new Scanner(System.in);
         
+
+        sc.close();
     }
 
     public static void teoremaDeHerao(){
