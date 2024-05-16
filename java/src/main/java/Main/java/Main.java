@@ -20,6 +20,7 @@ public class Main{
         System.out.println("[3] Juros");
         System.out.println("[4] Trignometria do Triângulo Retangulo");
         System.out.println("[5] Área do Quadrado");
+        System.out.println("[6] Raízes");
         
         //resultado do número escolhido.
         int escolher = sc.nextInt();
@@ -40,6 +41,9 @@ public class Main{
                 break;
             case 5:
                 areaDoQuadrado();
+                break;
+            case 6:
+                raizes();
                 break;
             default:
                 //mensagem caso você não escolha uma opção na lista.
@@ -513,4 +517,90 @@ public class Main{
         }
         sc.close();
     }
+    public static void raizes(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("--------------------------");
+        System.out.println("Raízes");
+        System.out.println("--------------------------");
+        System.out.println("Qual raíz deseja calcular?");
+        System.out.println("--------------------------");
+        System.out.println("[1] Raíz Quadrada");
+        System.out.println("[2] Raíz Cúbica");
+
+        int escolha = sc.nextInt();
+
+        switch (escolha) {
+            case 1:
+                double resultado, valorAoQuadrado;
+
+                System.out.println("---------------------------------------------");
+                System.out.println("Qual o valor da Raíz que vc deseja descobrir?");
+                System.out.println("---------------------------------------------");
+
+                valorAoQuadrado = sc.nextDouble();
+
+                resultado = Math.sqrt(valorAoQuadrado);
+                System.out.println("A raiz de " + valorAoQuadrado + " é de " + resultado);
+                System.out.println("---------------------------------------------------");
+
+                System.out.println("Deseja voltar ao Menu ou as Raízes?");
+                System.out.println("-----------------------------------");
+                System.out.println("[1] Menu");
+                System.out.println("[2] Raízes");
+
+                int escolha1 = sc.nextInt();
+
+                switch (escolha1) {
+                    case 1:
+                        menu();
+                        break;
+                    case 2:
+                        raizes();
+                        break;
+                    default:
+                    menu();
+                        break;
+                }
+                break;
+            case 2:
+                double resultado1, valorCubico;
+
+                System.out.println("-----------------------------------------------");
+                System.out.println("Qual o valor da Raíz que você deseja descobrir?");
+                System.out.println("-----------------------------------------------");
+
+                valorCubico = sc.nextDouble();
+
+                resultado1 = Math.cbrt(valorCubico);
+
+                System.out.println("O valor da Raíz de " + valorCubico + " é de " + resultado1);
+
+                System.out.println("-----------------------------------");
+                System.out.println("Deseja voltar ao Menu ou as Raízes?");
+                System.out.println("-----------------------------------");
+                System.out.println("[1] Menu");
+                System.out.println("[2] Raízes");
+
+                int escolha2 = sc.nextInt();
+
+                switch (escolha2) {
+                    case 1:
+                        menu();
+                        break;
+                    case 2:
+                        raizes();
+                        break;
+                    default:
+                    menu();
+                        break;
+                }
+                break;
+            default:
+                System.out.println("Opção errada, voltará ao menu");
+                menu();
+                break;
+        }
+        sc.close();
+    }
+    
 }
