@@ -21,6 +21,7 @@ public class Main{
         System.out.println("[4] Trignometria do Triângulo Retangulo");
         System.out.println("[5] Área do Quadrado");
         System.out.println("[6] Raízes");
+        System.out.println("[7] Tabuada");
         
         //resultado do número escolhido.
         int escolher = sc.nextInt();
@@ -44,6 +45,9 @@ public class Main{
                 break;
             case 6:
                 raizes();
+                break;
+            case 7:
+                tabuada();
                 break;
             default:
                 //mensagem caso você não escolha uma opção na lista.
@@ -600,6 +604,52 @@ public class Main{
                 menu();
                 break;
         }
+        sc.close();
+    }
+    public static void tabuada(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===========================");
+        System.out.println("          TABUADA          ");
+        System.out.println("===========================");
+
+        System.out.println();
+        System.out.println("===========================");
+        System.out.println("Digite o número da tabuada:");
+        int numero = sc.nextInt();
+        System.out.println("===========================");
+
+        System.out.println("TABUADA DE "+ numero+ ":");
+        System.out.println("===========================");
+
+        for(int i = 1 ; i <= 10 ; i ++){
+            int resultado = numero * i;
+
+            System.out.println(numero + " x " + i + " = " + resultado);
+        }
+
+        System.out.println("=============================");
+        System.out.println("Voltar a Tabuada, ou ao Menu?");
+        System.out.println("=============================");
+
+        System.out.println("[1] Menu");
+        System.out.println("[2] Tabuada");
+        System.out.println("=============================");
+
+        int escolha = sc.nextInt();
+
+        switch (escolha) {
+            case 1:
+                menu();
+                break;
+            case 2:
+                tabuada();
+                break;
+            default:
+                menu();
+                break;
+        }
+
         sc.close();
     }
     
