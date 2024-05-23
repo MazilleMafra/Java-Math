@@ -1,7 +1,7 @@
 package Main.java;
 
 import java.util.Scanner;
-import java.Triangulo;
+import Main.java.classes.Triangulo;
 import java.lang.Math;
 
 
@@ -212,10 +212,11 @@ public class Main{
         p = (y.a +y.b + y.c) / 2.0;
         double areaY = Math.sqrt(p * (p - y.a) * (p - y.b) * (p - y.c));
 
-        System.out.printf("As medidas do Triâangulo X é de: %.4f%n", areaX);
-        System.out.println("--------------------------------------");
-        System.out.printf("As medidas do Triângulo Y é de: %.4f%n", areaY);
-
+        System.out.println("=====================================");
+        System.out.printf("As medidas da área do Triângulo X é de: %.4f%n", areaX);
+        System.out.println("=====================================");
+        System.out.printf("As medidas da área do Triângulo Y é de: %.4f%n", areaY);
+        System.out.println("=====================================");
         if (areaX > areaY){
             System.out.println("A maior área é a X");
         } else {
